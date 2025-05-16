@@ -1,4 +1,6 @@
 'use client';
+import Link from "next/link";
+
 
 import React, { useState, useEffect } from "react";
 import { GithubIcon, LinkedinIcon, Sun, Moon } from "lucide-react";
@@ -69,13 +71,13 @@ export default function Portfolio() {
       {/* Sticky Navigation Bar */}
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-300 dark:border-gray-700 py-4 flex justify-between items-center px-4">
         <div className="flex space-x-6">
-        <a href="/" className="flex items-center">
+        <Link href="/" className="flex items-center">
   <img
     src="/logo.png"
     alt="Heeya Amin Signature Logo"
     className="h-10 w-auto"
   />
-</a>
+</Link>
 
           <a href="#whatido" className="hover:text-blue-500 transition-colors">What I Do</a>
           <a href="#proficiencies" className="hover:text-blue-500 transition-colors">Proficiencies</a>
