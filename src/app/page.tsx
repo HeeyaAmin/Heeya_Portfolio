@@ -69,6 +69,14 @@ export default function Portfolio() {
       {/* Sticky Navigation Bar */}
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-300 dark:border-gray-700 py-4 flex justify-between items-center px-4">
         <div className="flex space-x-6">
+        <a href="/" className="flex items-center">
+  <img
+    src="/logo.png"
+    alt="Heeya Amin Signature Logo"
+    className="h-10 w-auto"
+  />
+</a>
+
           <a href="#whatido" className="hover:text-blue-500 transition-colors">What I Do</a>
           <a href="#proficiencies" className="hover:text-blue-500 transition-colors">Proficiencies</a>
           <a href="#education" className="hover:text-blue-500 transition-colors">Education</a>
@@ -85,68 +93,73 @@ export default function Portfolio() {
 
       {/* Hero Section */}
       <MotionSection
-  className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-4xl mx-auto text-left"
-  initial={{ opacity: 0, y: 50 }}
+  className="w-full bg-gradient-to-t from-white via-[#e3f2fd] to-[#fef9f9] dark:from-[#111] dark:via-[#2e2e2e] dark:to-[#1f1f1f] text-black dark:text-white px-4 sm:px-8 py-20"
+
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6 }}
   viewport={{ once: true }}
 >
-  {/* Text Section */}
-  <div className="md:w-2/3 space-y-4">
-    <h1 className="text-4xl font-bold tracking-tight">Hi, I’m Heeya Amin</h1>
-    <p className="text-lg leading-relaxed">
-      I’m a Data Science graduate student at Indiana University with a deep passion for building intelligent, scalable systems. I specialize in AI, machine learning, full-stack development, and cloud computing. My mission is to craft innovative solutions that bridge the gap between complex technologies and real-world needs.
-    </p>
-    <div className="flex gap-4">
-      <a
-        href="https://github.com/HeeyaAmin"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-blue-600 transition-transform hover:scale-110"
-      >
-        <GithubIcon className="w-6 h-6" />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/heeya-amin/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-blue-600 transition-transform hover:scale-110"
-      >
-        <LinkedinIcon className="w-6 h-6" />
-      </a>
+  <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-6xl mx-auto text-left">
+    {/* Text Section */}
+    <div className="md:w-2/3 space-y-4">
+      <h1 className="text-4xl font-bold tracking-tight">Hi, I’m Heeya Amin</h1>
+      <p className="text-lg leading-relaxed">
+        I’m a Data Science graduate student at Indiana University with a deep passion for building intelligent, scalable systems.
+        I specialize in AI, machine learning, full-stack development, and cloud computing. My mission is to craft innovative
+        solutions that bridge the gap between complex technologies and real-world needs.
+      </p>
+      <div className="flex gap-4">
+        <a
+          href="https://github.com/HeeyaAmin"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-blue-600 transition-transform hover:scale-110"
+        >
+          <GithubIcon className="w-6 h-6" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/heeya-amin/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-blue-600 transition-transform hover:scale-110"
+        >
+          <LinkedinIcon className="w-6 h-6" />
+        </a>
+      </div>
+
+      {/* Buttons */}
+      <div className="mt-4 flex flex-wrap gap-4">
+        <a
+          href="#contact"
+          className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-all duration-300"
+        >
+          Contact Me
+        </a>
+        <a
+          href="/Heeya_Amin_Resume.pdf"
+          download
+          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-all duration-300"
+        >
+          Download Resume
+        </a>
+      </div>
     </div>
+
+    {/* Image Section */}
+    <img
+      src="/profile.png"
+      alt="Heeya Amin"
+      className="w-40 h-52 md:w-56 md:h-72 rounded-full shadow-lg object-cover"
+    />
   </div>
-
-  {/* Image Section */}
-  <img
-  src="/profile.png"
-  alt="Heeya Amin"
-  className="w-40 h-52 md:w-56 md:h-72 rounded-full shadow-lg object-cover"
-/>
-
-
 </MotionSection>
 
-      {/* <MotionSection className="text-center space-y-4 max-w-3xl mx-auto" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-        <img src="/profile.png" alt="Heeya Amin" className="w-32 h-40 rounded-full mx-auto shadow-md object-cover" />
-        <h1 className="text-4xl font-bold tracking-tight">Hi, I’m Heeya Amin</h1>
-        <p className="text-lg leading-relaxed">
-          I’m a Data Science graduate student at Indiana University with a deep passion for building intelligent, scalable systems. I specialize in AI, machine learning, full-stack development, and cloud computing. My mission is to craft innovative solutions that bridge the gap between complex technologies and real-world needs.
-        </p>
-        <div className="flex justify-center gap-4">
-          <a href="https://github.com/HeeyaAmin" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-transform hover:scale-110">
-            <GithubIcon className="w-6 h-6" />
-          </a>
-          <a href="https://www.linkedin.com/in/heeya-amin/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-transform hover:scale-110">
-            <LinkedinIcon className="w-6 h-6" />
-          </a>
-        </div>
-      </MotionSection> */}
 
-      {/* What I Do Section - Updated with Tech Stack Icons */}
+
+      {/* What I Do Section */}
       <MotionSection
   id="whatido"
-  className="max-w-6xl mx-auto space-y-8"
+  className="max-w-6xl mx-auto space-y-8 pt-24 md:pt-32"
   initial={{ opacity: 0, y: 50 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6 }}
@@ -209,30 +222,9 @@ export default function Portfolio() {
   </div>
 </MotionSection>
 
-      {/* <MotionSection id="whatido" className="max-w-6xl mx-auto space-y-8" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="md:w-1/2 text-center">
-            <img src="/whatido.png" alt="Ghibli AI Illustration" className="w-full max-w-sm mx-auto rounded-xl shadow-lg transition-transform duration-300 hover:scale-105" />
-          </div>
-          <div className="md:w-1/2 space-y-6">
-            <h2 className="text-4xl font-bold">What I Do</h2>
-            <p className="uppercase tracking-wider text-sm text-gray-500 dark:text-gray-300 font-semibold">Crazy Full Stack Developer Who Wants To Explore Every Tech Stack</p>
-            <div className="flex flex-wrap gap-4 justify-start">
-              {["html5", "css3", "sass", "js", "react", "node", "swift", "npm", "sql", "aws", "firebase", "python", "docker"].map(icon => (
-                <img key={icon} src={`/tech/${icon}.svg`} alt={icon} className="h-10 w-10" />
-              ))}
-            </div>
-            <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300 mt-4">
-              <li>⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications</li>
-              <li>⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks</li>
-              <li>⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean</li>
-            </ul>
-          </div>
-        </div>
-      </MotionSection> */}
 
       {/* Proficiencies Section */}
-      <MotionSection id="proficiencies" className="max-w-5xl mx-auto space-y-8" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
+      <MotionSection id="proficiencies" className="max-w-5xl mx-auto space-y-8 pt-24 md:pt-32" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
         <h2 className="text-4xl font-bold text-center">Proficiencies</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {proficiencies.map((item, idx) => (
@@ -253,7 +245,7 @@ export default function Portfolio() {
       </MotionSection>
 
       {/* Education Section */}
-      <MotionSection id="education" className="max-w-5xl mx-auto space-y-12" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
+      <MotionSection id="education" className="max-w-5xl mx-auto space-y-12 pt-24 md:pt-32" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
         <h2 className="text-4xl font-bold tracking-tight mb-4">Education</h2>
 
         <div className="flex items-start gap-6">
@@ -288,7 +280,7 @@ export default function Portfolio() {
       </MotionSection>
 
       {/* Experience Section */}
-      <MotionSection id="experience" className="max-w-6xl mx-auto space-y-12" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
+      <MotionSection id="experience" className="max-w-6xl mx-auto space-y-12 pt-24 md:pt-32" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
         <h2 className="text-4xl font-bold tracking-tight mb-10 text-center">Experiences</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
@@ -347,68 +339,180 @@ export default function Portfolio() {
       </MotionSection>
 
       {/* Projects Section */}
-      <MotionSection id="projects" className="max-w-6xl mx-auto space-y-12" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
+
+      <MotionSection id="projects" className="max-w-6xl mx-auto space-y-12 pt-24 md:pt-32" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
         <h2 className="text-4xl font-bold tracking-tight mb-10 text-center">Open Source Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <a
-              key={index}
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 hover:shadow-xl transition-all duration-300"
-            >
-              <h3 className="text-xl font-bold mb-2">{project.name}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
-              <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400">
-                <span>{project.tech}</span>
-                <span>🍴 {project.forks}</span>
-                <span>⭐ {project.stars}</span>
-                <span>{project.size}</span>
-              </div>
-            </a>
-          ))}
-        </div>
-      </MotionSection>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+  {projects.map((project, index) => (
+    <a
+      key={index}
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 hover:shadow-xl transition-all duration-300"
+    >
+      <h3 className="text-xl font-bold mb-2">{project.name}</h3>
+      <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
+      <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400">
+        <span>{project.tech}</span>
+        <span>🍴 {project.forks}</span>
+        <span>⭐ {project.stars}</span>
+        <span>{project.size}</span>
+      </div>
+    </a>
+  ))}
+
+  {/* Embedded YouTube Video Card */}
+  <div className="block bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 hover:shadow-xl transition-all duration-300">
+    <h3 className="text-xl font-bold mb-2">Intelligent Blogging with AI & SQL</h3>
+    <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+      🎥 Watch the demo showcasing how LangChain, GPT, SQL, and Flask are used to build a powerful AI-driven blog generation platform.
+    </p>
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        paddingBottom: "56.25%", // 16:9 aspect ratio
+        height: 0,
+        overflow: "hidden",
+        borderRadius: "12px",
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+      }}
+    >
+      <iframe
+        src="https://www.youtube.com/embed/dn7ohTjH9ko"
+        title="Intelligent Blogging with AI & SQL"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          border: "0",
+          borderRadius: "12px",
+        }}
+      ></iframe>
+    </div>
+  </div>
+</div>
+</MotionSection>
+
+
 
       {/* Achievements Section */}
-      <MotionSection id="achievements" className="max-w-5xl mx-auto" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-        <div className="flex flex-col md:flex-row-reverse items-center gap-8">
-          <div className="md:w-1/2 space-y-4">
-            <h2 className="text-3xl font-bold tracking-tight">Achievements & Certifications</h2>
-            <ul className="list-disc list-inside space-y-2">
-              <li>Published research on Explainable AI in Healthcare (Springer, 2023)</li>
-              <li>Published AI Chatbot research in Springer (2023)</li>
-            </ul>
-          </div>
-          <div className="md:w-1/2 text-center">
-            <img src="/illustrations/achievements.svg" alt="Achievements" className="w-full max-w-xs mx-auto" />
-          </div>
-        </div>
-      </MotionSection>
+      <MotionSection
+  id="achievements"
+  className="max-w-6xl mx-auto pt-24 md:pt-32"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+  <h2 className="text-3xl font-bold tracking-tight text-center mb-10">Achievements & Certifications</h2>
+
+  <div className="grid md:grid-cols-2 gap-10 items-start">
+
+    {/* Paper 1 */}
+    <div className="space-y-4 text-center">
+      <a
+        href="https://link.springer.com/chapter/10.1007/978-981-97-3442-9_21"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block"
+      >
+        <img
+          src="/illustrations/explainable_ai_snapshot.png"
+          alt="Explainable AI Paper"
+          className="w-full max-w-sm mx-auto rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+      </a>
+      <p className="text-sm text-gray-700 dark:text-gray-300">
+        📄 <strong>Explainable AI in Healthcare</strong> – Published in <a href="https://link.springer.com/chapter/10.1007/978-981-97-3442-9_21" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Springer (2023)</a>
+      </p>
+    </div>
+
+    {/* Paper 2 */}
+    <div className="space-y-4 text-center">
+      <a
+        href="https://link.springer.com/chapter/10.1007/978-981-97-7862-1_24"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block"
+      >
+        <img
+          src="/illustrations/chatbot_paper_snapshot.png"
+          alt="AI Chatbot Paper"
+          className="w-full max-w-sm mx-auto rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+      </a>
+      <p className="text-sm text-gray-700 dark:text-gray-300">
+        🤖 <strong>AI Chatbot Research</strong> – Published in <a href="https://link.springer.com/chapter/10.1007/978-981-97-7862-1_24" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Springer (2023)</a>
+      </p>
+    </div>
+
+  </div>
+</MotionSection>
+
 
       {/* Blog Section */}
-      <MotionSection id="blog" className="max-w-5xl mx-auto" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="md:w-1/2 space-y-4">
-            <h2 className="text-3xl font-bold tracking-tight">Visit My Blog</h2>
-            <a
-              href="https://medium.com/@heeyaamin"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded"
-            >
-              Read My Blog
-            </a>
-          </div>
-          <div className="md:w-1/2 text-center">
-            <img src="/illustrations/blog.svg" alt="Blog" className="w-full max-w-xs mx-auto" />
-          </div>
-        </div>
-      </MotionSection>
+      <MotionSection
+  id="blog"
+  className="max-w-6xl mx-auto pt-24 md:pt-32"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+  <h2 className="text-3xl font-bold tracking-tight text-center mb-10">Visit My Blog</h2>
+
+  <div className="grid md:grid-cols-2 gap-10 items-end">
+    {/* Blog 1 */}
+    <div className="flex flex-col items-center text-center space-y-4">
+      <a
+        href="https://medium.com/@heeyaamin1/exploring-the-synergy-between-langchain-and-openai-with-python-9b67893df42c"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block w-full"
+      >
+        <img
+          src="/illustrations/langchain_openai_blog.png"
+          alt="LangChain & OpenAI Blog"
+          className="w-full max-w-sm mx-auto rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mt-4 hover:underline">
+          Exploring the Synergy between LangChain and OpenAI with Python
+        </h3>
+      </a>
+    </div>
+
+    {/* Blog 2 */}
+    <div className="flex flex-col items-center text-center space-y-4">
+      <a
+        href="https://medium.com/@heeyaamin1/data-science-internship-ed27ba427cc2"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block w-full"
+      >
+        <img
+          src="/illustrations/data_science_internship.png"
+          alt="Data Science Internship Blog"
+          className="w-full max-w-sm mx-auto rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mt-4 hover:underline">
+          Reflections from My Data Science Internship
+        </h3>
+      </a>
+    </div>
+  </div>
+
+</MotionSection>
+
+
 
       {/* Contact Section */}
-      <MotionSection id="contact" className="max-w-xl mx-auto space-y-4" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
+      <MotionSection id="contact" className="max-w-xl mx-auto space-y-4 pt-24 md:pt-32" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
         <h2 className="text-3xl font-bold tracking-tight text-center">Reach Out to Me</h2>
         <form
           action="https://formspree.io/f/xoqgrldz"
@@ -452,270 +556,3 @@ export default function Portfolio() {
     </main>
   );
 }
-
-// 'use client';
-
-// import React from "react";
-// import { GithubIcon, LinkedinIcon } from "lucide-react";
-// import { motion, MotionProps } from "framer-motion";
-
-// const MotionSection: React.FC<React.HTMLAttributes<HTMLElement> & MotionProps> = motion.section;
-
-// export default function Portfolio() {
-//   return (
-//     <main className="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white px-4 sm:px-6 lg:px-8 space-y-20">
-
-//       {/* Sticky Navigation Bar */}
-//       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-300 dark:border-gray-700 py-4 flex justify-center space-x-6">
-//         <a href="#whatido" className="hover:text-blue-500 transition-colors">What I Do</a>
-//         <a href="#proficiencies" className="hover:text-blue-500 transition-colors">Proficiencies</a>
-//         <a href="#education" className="hover:text-blue-500 transition-colors">Education</a>
-//         <a href="#experience" className="hover:text-blue-500 transition-colors">Experience</a>
-//         <a href="#projects" className="hover:text-blue-500 transition-colors">Projects</a>
-//         <a href="#achievements" className="hover:text-blue-500 transition-colors">Achievements</a>
-//         <a href="#blog" className="hover:text-blue-500 transition-colors">Blog</a>
-//         <a href="#contact" className="hover:text-blue-500 transition-colors">Contact</a>
-//       </nav>
-
-//       {/* Hero Section */}
-//       <MotionSection className="text-center space-y-4 max-w-3xl mx-auto" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-//         <img src="/profile.png" alt="Heeya Amin" className="w-32 h-40 rounded-full mx-auto shadow-md object-cover" />
-//         <h1 className="text-4xl font-bold tracking-tight">Hi, I’m Heeya Amin</h1>
-//         <p className="text-lg leading-relaxed">
-//           I’m a Data Science graduate student at Indiana University with a deep passion for building intelligent, scalable systems. I specialize in AI, machine learning, full-stack development, and cloud computing. My mission is to craft innovative solutions that bridge the gap between complex technologies and real-world needs.
-//         </p>
-//         <div className="flex justify-center gap-4">
-//           <a href="https://github.com/HeeyaAmin" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-transform hover:scale-110">
-//             <GithubIcon className="w-6 h-6" />
-//           </a>
-//           <a href="https://www.linkedin.com/in/heeya-amin/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-transform hover:scale-110">
-//             <LinkedinIcon className="w-6 h-6" />
-//           </a>
-//         </div>
-//       </MotionSection>
-
-//       {/* Alternating Sections Start Here */}
-//       {/* What I Do */}
-//       <MotionSection id="whatido" className="max-w-5xl mx-auto space-y-4" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-//         <div className="flex flex-col md:flex-row items-center gap-8">
-//           <div className="md:w-1/2 space-y-4">
-//             <h2 className="text-3xl font-bold tracking-tight">What I Do</h2>
-//             <p className="text-base leading-relaxed">
-//               I transform innovative ideas into real-world applications using artificial intelligence, machine learning, natural language processing, and full-stack development. With hands-on experience in cloud computing, data engineering, and scalable system design, I build intelligent platforms that drive automation and meaningful insights.
-//             </p>
-//           </div>
-//           <div className="md:w-1/2 text-center">
-//             <img
-//                src="/whatido.png"
-//                alt="AI Illustration"
-//                className="w-full max-w-sm mx-auto rounded-xl shadow-lg transition-transform duration-300 hover:scale-105 bg-gradient-to-r from-gray-50 to-white dark:from-gray-800 dark:to-gray-900"
-//             />
-// </div>
-
-//           </div>
-//       </MotionSection>
-
-//       {/* Proficiencies */}
-//       <MotionSection id="proficiencies" className="max-w-5xl mx-auto space-y-4" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-//         <div className="flex flex-col md:flex-row-reverse items-center gap-8">
-//           <div className="md:w-1/2 space-y-4">
-//             <h2 className="text-3xl font-bold tracking-tight">Proficiencies</h2>
-//             <ul className="list-disc list-inside space-y-2">
-//               <li>🧠 Problem Solving & Data Structures</li>
-//               <li>💻 Programming Languages (Python, Java, C++, R, JavaScript)</li>
-//               <li>🛢️ Database Management (MySQL, MongoDB, Firebase)</li>
-//               <li>🗣️ Communication and Collaboration</li>
-//               <li>📈 Statistics and Mathematics</li>
-//               <li>🤖 Machine Learning and AI (TensorFlow, PyTorch, LangChain)</li>
-//               <li>📊 Data Visualization (Tableau, Power BI)</li>
-//               <li>🗂️ Big Data (Hadoop, Spark)</li>
-//               <li>☁️ Cloud Computing (GCP, Docker)</li>
-//             </ul>
-//           </div>
-//           <div className="md:w-1/2 text-center">
-//             <img src="/illustrations/skills.svg" alt="Skills" className="w-full max-w-xs mx-auto" />
-//           </div>
-//         </div>
-//       </MotionSection>
-
-//         {/* Education Section (Alternating Layout - Left Aligned Text, Right Image) */}
-// <MotionSection
-//   id="education"
-//   className="max-w-5xl mx-auto space-y-4"
-//   initial={{ opacity: 0, y: 50 }}
-//   whileInView={{ opacity: 1, y: 0 }}
-//   transition={{ duration: 0.6 }}
-//   viewport={{ once: true }}
-// >
-//   <div className="flex flex-col md:flex-row items-center gap-8">
-//     {/* Text Content */}
-//     <div className="md:w-1/2 space-y-4">
-//       <h2 className="text-3xl font-bold tracking-tight">Education</h2>
-//       <div>
-//         <p className="font-bold">Indiana University, Bloomington, IN</p>
-//         <p>Masters in Data Science (2024–2026) | GPA: 3.5/4.0</p>
-//       </div>
-//       <div>
-//         <p className="font-bold">Gujarat Technological University, Gujarat, India</p>
-//         <p>Bachelors in Computer Engineering (2020–2024) | GPA: 8.5/10</p>
-//       </div>
-//     </div>
-
-//     {/* Optional Image / Illustration */}
-//     <div className="md:w-1/2 text-center">
-//       <img
-//         src="/illustrations/education.svg"
-//         alt="Education Illustration"
-//         className="w-full max-w-xs mx-auto"
-//       />
-//     </div>
-//   </div>
-// </MotionSection>
-
-//     {/* Experience Section (Alternating Layout - Left Image, Right Text) */}
-//     <MotionSection id="experience" className="max-w-5xl mx-auto space-y-4" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-//         <div className="flex flex-col md:flex-row-reverse items-center gap-8">
-//           <div className="md:w-1/2 space-y-4">
-//             <h2 className="text-3xl font-bold tracking-tight">Experience</h2>
-//             <ul className="list-disc list-inside space-y-2">
-//               <li><strong>Intuz Software Company</strong> – AI/ML Intern (2023–2024)</li>
-//               <li><strong>Laurentian University</strong> – Summer Research Intern (2023)</li>
-//               <li><strong>Oasis Infobyte</strong> – Data Science Intern (2023)</li>
-//             </ul>
-//           </div>
-//           <div className="md:w-1/2 text-center">
-//             <img src="/illustrations/experience.svg" alt="Experience Illustration" className="w-full max-w-xs mx-auto" />
-//           </div>
-//         </div>
-//       </MotionSection>
-
-//       {/* Projects Section (Alternating Layout - Text Left, Image Right) */}
-// <MotionSection
-//   id="projects"
-//   className="max-w-5xl mx-auto"
-//   initial={{ opacity: 0, y: 50 }}
-//   whileInView={{ opacity: 1, y: 0 }}
-//   transition={{ duration: 0.6 }}
-//   viewport={{ once: true }}
-// >
-//   <div className="flex flex-col md:flex-row items-center gap-8">
-//     <div className="md:w-1/2 space-y-4">
-//       <h2 className="text-3xl font-bold tracking-tight">Projects</h2>
-//       <ul className="list-disc list-inside space-y-2">
-//         <li>AI-Powered Blog Generator & Editor (LangChain, OpenAI, Flask)</li>
-//         <li>Cloud Resource Optimization using ML (TensorFlow, GCP)</li>
-//         <li>Skin Lesion Analysis using CNN (TensorFlow, OpenCV)</li>
-//       </ul>
-//     </div>
-//     <div className="md:w-1/2 text-center">
-//       <img
-//         src="/illustrations/projects.svg"
-//         alt="Projects Illustration"
-//         className="w-full max-w-xs mx-auto"
-//       />
-//     </div>
-//   </div>
-// </MotionSection>
-
-// {/* Achievements & Certifications Section (Alternating Layout - Image Left, Text Right) */}
-// <MotionSection
-//   id="achievements"
-//   className="max-w-5xl mx-auto"
-//   initial={{ opacity: 0, y: 50 }}
-//   whileInView={{ opacity: 1, y: 0 }}
-//   transition={{ duration: 0.6 }}
-//   viewport={{ once: true }}
-// >
-//   <div className="flex flex-col md:flex-row-reverse items-center gap-8">
-//     <div className="md:w-1/2 space-y-4">
-//       <h2 className="text-3xl font-bold tracking-tight">Achievements & Certifications</h2>
-//       <ul className="list-disc list-inside space-y-2">
-//         <li>Published research on Explainable AI in Healthcare (Springer, 2023)</li>
-//         <li>Published AI Chatbot research in Springer (2023)</li>
-//       </ul>
-//     </div>
-//     <div className="md:w-1/2 text-center">
-//       <img
-//         src="/illustrations/achievements.svg"
-//         alt="Achievements Illustration"
-//         className="w-full max-w-xs mx-auto"
-//       />
-//     </div>
-//   </div>
-// </MotionSection>
-
-//     {/* Blog Link Section (Alternating Layout - Text Left, Image Right) */}
-// <MotionSection
-//   id="blog"
-//   className="max-w-5xl mx-auto"
-//   initial={{ opacity: 0, y: 50 }}
-//   whileInView={{ opacity: 1, y: 0 }}
-//   transition={{ duration: 0.6 }}
-//   viewport={{ once: true }}
-// >
-//   <div className="flex flex-col md:flex-row items-center gap-8">
-//     <div className="md:w-1/2 space-y-4">
-//       <h2 className="text-3xl font-bold tracking-tight">Visit My Blog</h2>
-//       <a
-//         href="https://medium.com/@heeyaamin"
-//         target="_blank"
-//         rel="noopener noreferrer"
-//         className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded"
-//       >
-//         Read My Blog
-//       </a>
-//     </div>
-//     <div className="md:w-1/2 text-center">
-//       <img
-//         src="/illustrations/blog.svg"
-//         alt="Blog Illustration"
-//         className="w-full max-w-xs mx-auto"
-//       />
-//     </div>
-//   </div>
-// </MotionSection>
-
-//      {/* Contact Section */}
-//      <MotionSection id="contact" className="max-w-xl mx-auto space-y-4" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-//         <h2 className="text-3xl font-bold tracking-tight text-center">Reach Out to Me</h2>
-//         <form
-//           action="https://formspree.io/f/xoqgrldz"
-//           method="POST"
-//           className="space-y-4"
-//         >
-//           <input
-//             type="text"
-//             name="name"
-//             placeholder="Your Name"
-//             required
-//             className="w-full p-2 border rounded text-black"
-//           />
-//           <input
-//             type="email"
-//             name="email"
-//             placeholder="Your Email"
-//             required
-//             className="w-full p-2 border rounded text-black"
-//           />
-//           <textarea
-//             name="message"
-//             placeholder="Your Message"
-//             rows={4}
-//             required
-//             className="w-full p-2 border rounded text-black"
-//           ></textarea>
-//           <button
-//             type="submit"
-//             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
-//           >
-//             Send Message
-//           </button>
-//         </form>
-//       </MotionSection>
-
-
-
-//     </main>
-//   );
-// }
-
