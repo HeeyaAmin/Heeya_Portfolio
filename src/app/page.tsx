@@ -138,12 +138,14 @@ export default function Portfolio() {
           Contact Me
         </a>
         <a
-          href="/Heeya_Amin_Resume.pdf"
-          download
-          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-all duration-300"
-        >
-          Download Resume
+          href="https://drive.google.com/file/d/1uuBqiwaPhY-LdIqFzlA1jllDE1TXN2mx/view?usp=sharing"
+           target="_blank"
+            rel="noopener noreferrer"
+             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-all duration-300"
+        > 
+            View Resume
         </a>
+
       </div>
     </div>
 
