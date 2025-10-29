@@ -24,15 +24,16 @@ export default function Portfolio() {
   };
 
   const proficiencies = [
-    { label: "🧠 Problem Solving & Data Structures", level: 8 },
-    { label: "💻 Programming Languages (Python, Java, C++, R, JavaScript)", level: 9 },
-    { label: "🛢️ Database Management (MySQL, MongoDB, Firebase)", level: 9 },
-    { label: "🗣️ Communication and Collaboration", level: 10 },
-    { label: "📈 Statistics and Mathematics", level: 8 },
-    { label: "🤖 Machine Learning and AI (TensorFlow, PyTorch, LangChain)", level: 8 },
-    { label: "📊 Data Visualization (Tableau, Power BI)", level: 9 },
-    { label: "🗂️ Big Data (Hadoop, Spark)", level: 9 },
-    { label: "☁️ Cloud Computing (GCP, Docker)", level: 8 },
+    { label: "Programming Languages (Python, Java, C/C++, R, JavaScript/TypeScript)", level: 9 },
+    { label: "Machine Learning & AI (scikit-learn, TensorFlow/PyTorch, LangChain)", level: 8 },
+    { label: "Backend & APIs (Node/Express, FastAPI, REST)", level: 9 },
+    { label: "Frontend (React, Next.js, Tailwind, PWAs)", level: 8 },
+    { label: "Databases (MySQL, MongoDB, Firebase, SQL)", level: 9 },
+    { label: "Data Engineering (ETL, Pandas, NumPy, batching)", level: 8 },
+    { label: "Cloud & DevOps (GCP, AWS, Docker, CI/CD)", level: 8 },
+    { label: "Statistics & Mathematics (Regression, Hypothesis Testing)", level: 8 },
+    { label: "Big Data (Hadoop, Spark – coursework/project exposure)", level: 7 },
+    { label: "Communication & Collaboration (Docs, Reviews, Demos)", level: 10 },
   ];
   const projects = [
     {
@@ -95,158 +96,223 @@ export default function Portfolio() {
 
       {/* Hero Section */}
       <MotionSection
-  className="w-full bg-gradient-to-t from-white via-[#e3f2fd] to-[#fef9f9] dark:from-[#111] dark:via-[#2e2e2e] dark:to-[#1f1f1f] text-black dark:text-white px-4 sm:px-8 py-20"
-
+  id="hero"
+  // Full-bleed grey gradient + subtle bottom fade that blends into next section
+  className="relative w-full text-black dark:text-white overflow-hidden
+             py-16 md:py-24
+             bg-gradient-to-b from-white via-gray-50 to-gray-100
+             dark:from-[#0f0f0f] dark:via-[#161616] dark:to-[#1c1c1c]
+             after:content-[''] after:absolute after:inset-x-0 after:bottom-0
+             after:h-20 after:bg-gradient-to-b after:from-transparent
+             after:to-gray-100 dark:after:to-[#1c1c1c]
+             -mb-4 md:-mb-8"
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6 }}
   viewport={{ once: true }}
 >
-  <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-6xl mx-auto text-left">
-    {/* Text Section */}
-    <div className="md:w-2/3 space-y-4">
-      <h1 className="text-4xl font-bold tracking-tight">Hi, I’m Heeya Amin</h1>
-      <p className="text-lg leading-relaxed">
-        I’m a Data Science graduate student at Indiana University with a deep passion for building intelligent, scalable systems.
-        I specialize in AI, machine learning, full-stack development, and cloud computing. My mission is to craft innovative
+  {/* Optional ultra-subtle noise/mesh overlay for depth (keeps it grey) */}
+  <div
+    aria-hidden
+    className="pointer-events-none absolute inset-0 opacity-[0.06] dark:opacity-[0.08]"
+    style={{
+      backgroundImage:
+        "radial-gradient(60rem 60rem at 20% -10%, rgba(0,0,0,.08), transparent 40%), radial-gradient(40rem 40rem at 110% 10%, rgba(0,0,0,.06), transparent 40%)",
+    }}
+  />
+
+  {/* Content container */}
+  <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 px-6 md:px-12">
+    {/* Text */}
+    <div className="md:w-2/3 space-y-6">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight">
+        Hi, I’m{" "}
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+          Heeya Amin
+        </span>
+      </h1>
+
+      <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-800 dark:text-gray-200">
+        I’m a Data Science graduate student at <strong>Indiana University</strong> with a passion for
+        building intelligent, scalable systems. I specialize in <strong>AI, machine learning, full-stack
+        development</strong>, and <strong>cloud computing</strong>. My mission is to craft innovative
         solutions that bridge the gap between complex technologies and real-world needs.
       </p>
-      <div className="flex gap-4">
+
+      {/* Socials */}
+      <div className="flex gap-4 pt-2">
         <a
           href="https://github.com/HeeyaAmin"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-blue-600 transition-transform hover:scale-110"
+          aria-label="GitHub"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full ring-1 ring-black/10 dark:ring-white/10 hover:scale-110 transition"
         >
-          <GithubIcon className="w-6 h-6" />
+          <GithubIcon className="w-5 h-5" />
         </a>
         <a
           href="https://www.linkedin.com/in/heeya-amin/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-blue-600 transition-transform hover:scale-110"
+          aria-label="LinkedIn"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full ring-1 ring-black/10 dark:ring-white/10 hover:scale-110 transition"
         >
-          <LinkedinIcon className="w-6 h-6" />
+          <LinkedinIcon className="w-5 h-5" />
         </a>
       </div>
 
-      {/* Buttons */}
+      {/* CTAs */}
       <div className="mt-4 flex flex-wrap gap-4">
         <a
           href="#contact"
-          className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-all duration-300"
+          className="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2.5 px-5 rounded-md transition"
         >
           Contact Me
         </a>
         <a
           href="https://drive.google.com/file/d/1uuBqiwaPhY-LdIqFzlA1jllDE1TXN2mx/view?usp=sharing"
-           target="_blank"
-            rel="noopener noreferrer"
-             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-all duration-300"
-        > 
-            View Resume
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2.5 px-5 rounded-md transition"
+        >
+          View Resume
         </a>
-
       </div>
     </div>
 
-    {/* Image Section */}
+    {/* Profile Image */}
     <img
       src="/profile.png"
       alt="Heeya Amin"
-      className="w-40 h-52 md:w-56 md:h-72 rounded-full shadow-lg object-cover"
+      className="w-44 h-44 sm:w-52 sm:h-52 md:w-60 md:h-60 rounded-full object-cover shadow-lg
+                 ring-2 ring-white/70 dark:ring-black/40"
     />
   </div>
 </MotionSection>
 
 
 
-      {/* What I Do Section */}
-      <MotionSection
-  id="whatido"
-  className="max-w-6xl mx-auto space-y-8 pt-24 md:pt-32"
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  viewport={{ once: true }}
->
-  <div className="flex flex-col md:flex-row items-stretch gap-8">
-    {/* Image Section */}
-    <div className="md:w-1/2 h-full flex items-center justify-center">
-      <img
-        src="/whatido.png"
-        alt="Ghibli AI Illustration"
-        className="h-full w-auto max-h-[500px] rounded-xl shadow-lg transition-transform duration-300 hover:scale-105 object-cover"
-      />
-    </div>
 
-    {/* Text Section */}
-    <div className="md:w-1/2 space-y-6 flex flex-col justify-center">
-      <h2 className="text-4xl font-bold">What I Do</h2>
-      <p className="uppercase tracking-wider text-sm text-gray-500 dark:text-gray-300 font-semibold">
-        Crazy Full Stack Developer Who Wants To Explore Every Tech Stack
-      </p>
-      <div className="flex flex-wrap gap-4 justify-start">
-        {[
-          "html5",
-          "css3",
-          "sass",
-          "js",
-          "react",
-          "node",
-          "swift",
-          "npm",
-          "sql",
-          "aws",
-          "firebase",
-          "python",
-          "docker",
-        ].map((icon) => (
-          <img
-            key={icon}
-            src={`/tech/${icon}.svg`}
-            alt={icon}
-            className="h-10 w-10"
-          />
-        ))}
+
+      {/* What I Do Section */}
+      <MotionSection id="whatido" className="relative py-20 md:py-28">
+  {/* Full-bleed background */}
+  <div
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style={{ backgroundImage: "url('/images/whatido.png')" }}
+  />
+  {/* Strong, adaptive overlay */}
+  <div className="absolute inset-0 bg-white/80 dark:bg-black/65" />
+
+  {/* Content container */}
+  <div className="relative max-w-6xl mx-auto px-6 md:px-12">
+    {/* Glass card for crisp text */}
+    <div className="rounded-2xl bg-white/70 dark:bg-zinc-900/60 backdrop-blur-sm ring-1 ring-black/5 dark:ring-white/10 p-6 md:p-10">
+      <div className="flex flex-col md:flex-row items-stretch gap-8">
+        {/* Text */}
+        <div className="md:w-4/5 space-y-6 text-gray-900 dark:text-gray-100">
+          <h2 className="text-4xl font-bold">What I Do</h2>
+
+          {/* Subheading (resume-aligned) */}
+          <p className="text-base md:text-lg font-medium tracking-wide">
+            Data/ML Engineer & Full-Stack Developer — I build ML systems, scalable APIs, and clean UIs that move metrics.
+          </p>
+
+          {/* Skill pills */}
+          <div className="flex flex-wrap gap-2">
+            {[
+              "Machine Learning (sklearn, TensorFlow, PyTorch)",
+              "Backend & APIs (Node/Express, Python/FastAPI)",
+              "Cloud & DevOps (GCP, AWS, CI/CD)",
+              "Front-end (React/Next.js, PWAs)",
+              "Data Ops (Pandas, SQL, ETL, Viz)"
+            ].map((t) => (
+              <span
+                key={t}
+                className="text-xs md:text-sm px-3 py-1 rounded-full bg-zinc-900/5 dark:bg-white/10"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+
+          {/* Outcome bullets (from your resume) */}
+          <ul className="space-y-2 text-sm md:text-base mt-2">
+            <li>⚡ Improved pricing-conversion forecasting accuracy by <strong>27%</strong> on 500K+ interactions.</li>
+            <li>⚡ Built ML workload scheduler that cut idle time by <strong>20%</strong> and cloud cost by <strong>18%</strong>.</li>
+            <li>⚡ Deployed a customer-support chatbot with <strong>89%</strong> intent recognition; automated <strong>70%</strong> Tier-1 workflows.</li>
+            <li>⚡ Processed <strong>1M+</strong> logs for real-time allocation; reduced latency from <strong>2.3s → 1.7s</strong>.</li>
+          </ul>
+
+          {/* Icons (kept) */}
+          <div className="flex flex-wrap gap-4 justify-start pt-2">
+            {[
+              "html5","css3","sass","js","react","node","swift",
+              "npm","sql","aws","firebase","python","docker",
+            ].map((icon) => (
+              <img
+                key={icon}
+                src={`/tech/${icon}.svg`}
+                alt={icon}
+                className="h-8 w-8 md:h-10 md:w-10 opacity-90"
+              />
+            ))}
+          </div>
+        </div>
       </div>
-      <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300 mt-4">
-        <li>
-          ⚡ Develop highly interactive Front end / User Interfaces for your web
-          and mobile applications
-        </li>
-        <li>
-          ⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks
-        </li>
-        <li>
-          ⚡ Integration of third party services such as Firebase/ AWS / Digital
-          Ocean
-        </li>
-      </ul>
     </div>
   </div>
 </MotionSection>
 
 
+
+
+
       {/* Proficiencies Section */}
-      <MotionSection id="proficiencies" className="max-w-5xl mx-auto space-y-8 pt-24 md:pt-32" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-        <h2 className="text-4xl font-bold text-center">Proficiencies</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {proficiencies.map((item, idx) => (
-            <div key={idx}>
-              <div className="flex justify-between items-center mb-1">
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{item.label}</span>
-                <span className="text-sm text-gray-500 dark:text-gray-400">{item.level}/10</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-3 dark:bg-gray-700">
-                <div
-                  className="bg-purple-500 h-3 rounded-full transition-all duration-700 ease-in-out"
-                  style={{ width: `${(item.level / 10) * 100}%` }}
-                ></div>
-              </div>
+      <MotionSection
+  id="proficiencies"
+  className="relative w-full overflow-hidden py-20 md:py-28
+             bg-gradient-to-b from-white via-gray-50 to-gray-100
+             dark:from-[#0f0f0f] dark:via-[#161616] dark:to-[#1c1c1c]"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+  {/* Container */}
+  <div className="relative max-w-6xl mx-auto px-6 md:px-12">
+    {/* Glass card for content (matches hero/what-I-do style) */}
+    <div className="rounded-2xl bg-white/70 dark:bg-zinc-900/60 backdrop-blur-sm ring-1 ring-black/5 dark:ring-white/10 p-6 md:p-10">
+      <h2 className="text-4xl font-bold text-center mb-8">Proficiencies</h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {proficiencies.map((item, idx) => (
+          <div key={idx} className="group">
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
+                {item.label}
+              </span>
+              <span className="text-sm text-gray-500 dark:text-gray-400">
+                {item.level}/10
+              </span>
             </div>
-          ))}
-        </div>
-      </MotionSection>
+
+            {/* Track */}
+            <div className="w-full h-3 rounded-full bg-gray-200/80 dark:bg-zinc-700/70 ring-1 ring-black/5 dark:ring-white/10">
+              {/* Fill */}
+              <div
+                className="h-3 rounded-full transition-all duration-700 ease-in-out
+                           bg-gradient-to-r from-indigo-500 to-blue-500
+                           group-hover:from-indigo-600 group-hover:to-blue-600"
+                style={{ width: `${(item.level / 10) * 100}%` }}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</MotionSection>
+
 
       {/* Education Section */}
       <MotionSection id="education" className="max-w-5xl mx-auto space-y-12 pt-24 md:pt-32" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
