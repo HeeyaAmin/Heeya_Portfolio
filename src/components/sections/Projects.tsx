@@ -56,22 +56,27 @@ export default function Projects() {
 
                 <div className="mt-5 border-t border-slate-200/70 pt-4">
                   <div className="flex items-center gap-4 text-sm text-slate-600">
-                    <a
-                      href={p.code}
-                      className="inline-flex items-center gap-2 hover:text-slate-900"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <span>🐙</span> Code
-                    </a>
-                    <a
-                      href={p.demo}
-                      className="inline-flex items-center gap-2 hover:text-slate-900"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <span>↗</span> Demo
-                    </a>
+                    {p.code && (
+                      <a
+                        href={p.code}
+                        className="inline-flex items-center gap-2 hover:text-slate-900"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <span>🐙</span> Code
+                      </a>
+                    )}
+
+                    {p.demo && (
+                      <a
+                        href={p.demo}
+                        className="inline-flex items-center gap-2 hover:text-slate-900"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <span>↗</span> Demo
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

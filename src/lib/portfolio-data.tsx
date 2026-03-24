@@ -41,50 +41,88 @@ export const profile = {
   
   export const skillCards = [
     { title: "Programming", icon: "code", chips: ["Python", "Java", "JavaScript", "TypeScript", "C", "C++", "HTML/CSS"] },
+    { title: "Analytics & BI", icon: "code", chips: ["EDA",
+"Data Visualization",
+"Data Storytelling",
+"KPI Tracking",
+"Dashboarding",
+"A/B Testing",
+"Hypothesis Testing",
+"Business Intelligence",
+"Data Cleaning",
+"Data Transformation",
+"Reporting & Insights"]},
     { title: "Machine Learning & AI", icon: "brain", chips: ["PyTorch", "TensorFlow", "Scikit-learn", "Keras", "OpenCV", "LangChain"] },
-    { title: "Data Science", icon: "chart", chips: ["NLP", "Regression", "Data Modeling", "ETL Pipelines", "Deep Learning", "NumPy"] },
-    { title: "Databases & Tools", icon: "db", chips: ["MySQL", "Oracle", "Snowflake", "SQLyog", "Workbench", "Postman"] },
-    { title: "Cloud & Big Data", icon: "cloud", chips: ["GCP", "AWS", "Azure", "Apache Spark", "Hadoop", "Vertex AI"] },
+    {
+  title: "Data Science",
+  icon: "chart",
+  chips: [
+    "Regression",
+    "Classification",
+    "Data Modeling",
+    "Feature Engineering",
+    "ETL Pipelines",
+    "Statistical Analysis",
+    "NumPy"
+  ]
+},
+    { title: "Databases & Tools", icon: "db", chips: ["MySQL", "Oracle", "Snowflake", "SQLyog", "Workbench", "Postman", "JSON"] },
+    {
+  title: "Cloud & Big Data",
+  icon: "cloud",
+  chips: [
+    "GCP",
+    "AWS",
+    "Azure",
+    "Apache Spark",
+    "Hadoop",
+    "Databricks",
+    "Vertex AI"
+  ]
+},
     { title: "Dev Tools", icon: "tools", chips: ["Git", "GitHub", "PyCharm", "Visual Studio", "IntelliJ", "Tableau"] },
   ];
   
   export const experience = [
     {
-      kind: "Internship",
-      date: "June 2025 – Aug 2025",
-      role: "AI/ML Engineer",
-      org: "Intuz Software Company",
-      location: "San Francisco, United States",
+      kind: "Part-time",
+      date: "Jan 2026 – Present",
+      role: "Faculty Assistant – Data Analytics",
+      org: "Indiana University Bloomington",
+      location: "Indiana, United States",
       bullets: [
-        "Applied AI/ML techniques to analyze 500K+ user interactions, enhancing pricing-conversion forecasting accuracy by 27%",
-        "Designed real-time pricing engines and discount simulation pipelines with A/B testing, achieving 22% uplift in call-to-action metrics",
-        "Prototyped 3+ dynamic UI components improving SaaS pricing configurator responsiveness by 35%",
-      ],
+    "Built geospatial analytics workflows using Google Earth Engine to map floating photovoltaic (FPV) installations and link them with waterbody datasets",
+    "Processed Sentinel-2 satellite imagery to compute chlorophyll-a concentrations using NDCI for large-scale water quality assessment",
+    "Developed data pipelines integrating FPV polygons with full lake geometries, enabling advanced spatial analysis and environmental monitoring",
+    "Designed interactive visualizations and time-series analysis tools to communicate environmental insights to cross-functional research teams",
+    ],
     },
-    {
-      kind: "Internship",
-      date: "Aug 2023 – June 2024",
-      role: "AI/ML Engineer",
-      org: "Intuz Software Company",
-      location: "Gujarat, India",
-      bullets: [
-        "Built multimodal blog generation platform using LangChain, reducing content creation time by 40%",
-        "Designed agentic AI chatbots for customer service using Rasa and NLP pipelines",
-        "Enhanced automation through generative LLM-based assistants, reducing response time by 30%",
-      ],
-    },
-    {
-      kind: "Internship",
-      date: "July 2023 – Aug 2023",
-      role: "Machine Learning Research Intern",
-      org: "Laurentian University",
-      location: "Ontario, Canada",
-      bullets: [
-        "Researched secure multimodal communication and econometric data modeling, enhancing data concealment capacity by 25%",
-        "Built interactive dashboards in Tableau and Power BI across economic indicators, improving engagement by 40%",
-        "Developed predictive models for classification and regression with up to 94% accuracy, emphasizing reliable evaluation",
-      ],
-    },
+{
+  kind: "Internship",
+  date: "Aug 2023 – Aug 2025",
+  role: "AI/ML Engineer",
+  org: "Intuz Software Company",
+  location: "California, United States",
+  bullets: [
+    "Engineered end-to-end data workflows using SQL, Python, and Excel to process 500K+ user interaction records, applying statistical modeling and regression techniques to improve pricing conversion forecasts by 27%",
+    "Built scalable ETL and data transformation pipelines in Databricks, handling data cleansing, validation, merging, and normalization to maintain high-quality, analytics-ready datasets",
+    "Designed and implemented KPI tracking systems and executive dashboards using BI tools, enabling real-time monitoring of product performance and cross-functional decision-making",
+    "Collaborated with product and engineering teams to integrate analytics outputs into business workflows, supporting experimentation, A/B testing, and pricing optimization strategies",
+  ],
+},
+{
+  kind: "Internship",
+  date: "July 2023 – Aug 2023",
+  role: "Machine Learning Intern",
+  org: "Laurentian University",
+  location: "Ontario, Canada",
+  bullets: [
+    "Performed large-scale data analysis using SQL and Python to evaluate performance trade-offs in secure data transmission systems across multiple datasets",
+    "Applied statistical modeling, hypothesis testing, and quantitative analysis to extract research insights and validate system performance metrics",
+    "Developed structured dashboards and visual reports using Tableau and Power BI to communicate complex analytical findings to both technical and non-technical stakeholders",
+    "Documented methodologies, experiments, and analytical workflows to ensure reproducibility and support ongoing research and collaboration within the team",
+  ],
+}
   ];
   
   export const projects = [
@@ -94,7 +132,7 @@ export const profile = {
         "Engineered ML-based workload scheduler using TensorFlow and Google Cloud AI APIs, reducing idle resource time by 20% and cloud costs by 18%. Built ReactJS dashboard for real-time monitoring.",
       tags: ["TensorFlow", "GCP", "ReactJS", "Cloud Computing"],
       code: "https://github.com/HeeyaAmin/ECC",
-      demo: "#",
+     
       tint: "bg-violet-50",
       bar: "bg-violet-600",
     },
@@ -104,7 +142,7 @@ export const profile = {
         "Designed AI chatbot trained on 25K+ queries achieving 89% intent recognition. Improved resolution time by 40% and automated 70% of Tier-1 workflows.",
       tags: ["NLP", "Machine Learning", "API Integration", "Python"],
       code: "https://github.com/HeeyaAmin/customer-support-chatbot",
-      demo: "#",
+
       tint: "bg-sky-50",
       bar: "bg-sky-600",
     },
@@ -124,7 +162,7 @@ export const profile = {
         "Published in Springer (Dec 2023). Proposed interpretable ML models combining LIME and SHAP, improving transparency by 35% for healthcare applications.",
       tags: ["LIME", "SHAP", "ML", "Healthcare"],
       code: "https://www.researchgate.net/publication/385147689_Explainable_AI_in_Healthcare_Methods_Concepts_and_Challenges",
-      demo: "#",
+
       tint: "bg-amber-50",
       bar: "bg-amber-600",
     },
@@ -134,7 +172,7 @@ export const profile = {
         "Published in Springer (Dec 2023). Developed AI-driven chatbot framework to streamline student and faculty interactions in academic settings.",
       tags: ["NLP", "Chatbot", "AI", "Education"],
       code: "https://github.com/HeeyaAmin/ChatBotRepo",
-      demo: "#",
+      
       tint: "bg-rose-50",
       bar: "bg-rose-600",
     },
@@ -144,7 +182,7 @@ export const profile = {
         "Created spam detection and car price estimation models with up to 94% accuracy using advanced statistical modeling and feature engineering techniques.",
       tags: ["Scikit-learn", "Python", "Statistics", "ML"],
       code: "https://github.com/HeeyaAmin/OIBSIP_TASK-3",
-      demo: "#",
+      
       tint: "bg-indigo-50",
       bar: "bg-indigo-600",
     },
