@@ -6,7 +6,7 @@ export const profile = {
       "MS Data Science graduate from Indiana University Bloomington specializing in machine learning, statistical modeling, and cloud computing.",
     aboutTitle: "Turning data into meaningful stories",
     aboutText:
-      "I'm an MS Data Science graduate from Indiana University Bloomington with expertise in econometrics, statistical modeling, machine learning, and cloud computing. I've built high-accuracy predictive models, generative AI systems, and multimodal pipelines using structured data from data warehouse environments to support digital content workflows, account-level analytics, and data-driven decision-making.\n\nKnown for strong attention to detail, I ensure data integrity, model reliability, and end-to-end analytical insights. Currently seeking full-time opportunities to apply my skills in AI/ML engineering, data science, and analytics roles.",
+     "I am an MS Data Science graduate student at Indiana University Bloomington with expertise in econometrics, statistical modeling, machine learning, and cloud computing. I specialize in transforming complex data into meaningful insights that drive informed decision-making. I have built high-accuracy predictive models, generative AI systems, and multimodal pipelines using structured data from large-scale warehouse environments. Through these projects, I’ve collaborated across workflows to translate technical findings into actionable solutions for business and analytics use cases.\n\nKnown for strong attention to detail and a problem-solving mindset, I focus on building reliable, end-to-end analytical systems while ensuring clarity in communicating results to both technical and non-technical audiences. I am currently seeking full-time opportunities in AI/ML engineering, data science, and analytics roles where I can contribute to impactful, data driven solutions",
     focus: ["Machine Learning", "Cloud Computing", "Statistical Modeling", "NLP", "ETL Pipelines", "Deep Learning"],
     links: {
       email: "heeyaamin03@gmail.com",
@@ -96,6 +96,18 @@ export const profile = {
     "Developed data pipelines integrating FPV polygons with full lake geometries, enabling advanced spatial analysis and environmental monitoring",
     "Designed interactive visualizations and time-series analysis tools to communicate environmental insights to cross-functional research teams",
     ],
+    },
+    {kind: "Part-time",
+      date: "Nov 2025 - Present",
+      role: "Center Desk Assistant",
+      org: "Indiana University Bloomington",
+      location: "Indiana, United States",
+      bullets: [
+        "Provided front-line support and assistance to students, faculty, and staff at the data science center, addressing inquiries related to resources, events, and services",
+        "Managed scheduling and logistics for workshops, seminars, and office hours, ensuring smooth operations and effective communication with attendees",
+        "Assisted in maintaining the center's facilities and resources, including troubleshooting technical issues and coordinating with IT support when necessary",
+        "Collaborated with the center's team to promote a welcoming and inclusive environment for all members of the data science community",
+      ],
     },
 {
   kind: "Internship",
